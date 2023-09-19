@@ -1,0 +1,34 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper{
+    width: 700px;
+    height: 730px;
+    border: 1px solid #000000;
+    padding: 10px 20px;
+    background-color: #a6e1ec;
+}
+
+img{
+    width: 200px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.text{
+    color: #3f51b5;
+}
+
+li{
+    list-style: none;
+    width: 595px;
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+    font-size: 14px;
+    border: 1px solid #000000;
+}
