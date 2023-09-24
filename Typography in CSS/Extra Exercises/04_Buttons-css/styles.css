@@ -1,0 +1,59 @@
+@import url(https://use.fontawesome.com/releases/v5.6.3/css/all.css);
+
+body{
+    background-color: lightgray;
+    padding: 25px 20px;
+}
+
+.fas{
+    background-color: transparent !important;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    border: 2px solid black;
+}
+
+a, button{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 8px 13px;
+    margin-right: 15px;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.normal__buttons *{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.normal__buttons button:last-child:hover{
+    border:2px solid rgb(0, 102, 0);
+    color: rgb(0, 102, 0);
+    cursor: pointer;
+}
+
+.filled__buttons *:not(h2){
+    color: rgb(251, 251, 251);
+    background-color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+.filled__buttons button:last-child:hover{
+    background-color: rgb(0, 102, 0);
+    border:2px solid rgb(0, 102, 0);
+}
+
+.icon__buttons *:not(h2){
+    color: rgb(251, 251, 251);
+    background-color: rgb(51, 51, 51);
+    cursor: pointer;
+}
+
+.icon__buttons button:last-child:hover{
+    background-color: rgb(0, 102, 0);
+    border:2px solid rgb(0, 102, 0);
+}
