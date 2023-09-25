@@ -1,0 +1,33 @@
+html{
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 4em;
+}
+
+body *:not(ul, ol, li){
+    margin: 0.8em 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Georgia, serif;
+}
+
+blockquote{
+    border-left: 2px solid rgb(221,221,221);
+    font-style: italic;
+    height: 10em;
+    padding: 1.5em;
+    line-height: 3;
+}
+
+.author{
+    text-align-last: end;
+}
+
+hr{
+    height: 2px;
+    background-color:  rgb(221,221,221);
+    margin: 2em 0;
+    border: none;
+}
