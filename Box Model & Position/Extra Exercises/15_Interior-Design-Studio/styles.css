@@ -1,1 +1,12 @@
-//TODO
+body{
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1{
+    position: absolute;
+    top: 40px;
+    left: 490px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 20px black; 
+}

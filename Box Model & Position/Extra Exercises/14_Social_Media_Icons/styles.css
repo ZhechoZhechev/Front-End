@@ -1,0 +1,36 @@
+ul{
+    display: inline-block;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+ul a{
+    background-color: lightgray;
+    border-radius: 50%;
+    padding: 0.5em 0.5em;
+    margin-left: 1em;
+    color: black;
+}
+
+ul li:nth-child(1) a:hover{
+    color: #0077B5;
+}
+
+ul li:nth-child(2) a:hover{
+    color: #1DA1F2;
+}
+
+ul li:nth-child(3) a:hover{
+    color: #db4a39;
+}
+
+ul li:nth-child(4) a:hover{
+    color: #4267B2;
+}
+
+ul li:nth-child(5) a:hover{
+    color: #405DE6;
+}

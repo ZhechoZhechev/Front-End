@@ -1,0 +1,92 @@
+html{
+    font-family:Helvetica, sans-serif;
+}
+
+body{
+    margin: 2.5em 2.5em;
+    background-color: lightgray;
+}
+
+main{
+    width: 60%;
+}
+
+img {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border: 3px solid black;
+    box-shadow: 2px 4px 4px 5px rgb(0 0 0 / 23%);
+}
+
+blockquote{
+    margin: 0;
+    color: gray;
+    font-style: italic;
+    width: 40%;
+    border-left: 3px solid gray;
+    padding-left: 40px;
+    float: right;
+}
+
+p{
+    margin-top: 1.5em;
+    line-height: 1.2;
+}
+
+main, aside{
+    display: inline-block;
+}
+
+h1, h2{
+    margin-top: 2em;
+}
+
+header{
+    border-bottom: 2px solid black;
+}
+
+aside{
+    float: right;
+    margin: 2em 8em 0 0;
+}
+
+blockquote p{
+    text-align: end;
+}
+
+header nav{
+    display: inline-block;
+    position: absolute;
+    right: 2em;
+    top: 2.5em;
+}
+
+header nav li{
+    display: inline;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgb(28, 197, 81);
+    font-size: 16px;
+    margin-right: 1.5em;
+}
+
+section nav a{
+    text-decoration: none;
+    color: rgb(28, 197, 81);
+}
+
+section nav li{
+    margin-top: 0.5em;
+}
+
+.img-first{
+    float: right;
+    margin: 0 0 0.5em 0.5em;
+}
+
+.img-second{
+    float: left;
+    margin: 0 1em 0.5em 0;
+}
