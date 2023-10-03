@@ -1,0 +1,39 @@
+html{
+    font-family: Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+}
+article{
+    display: inline-block;
+    width: 55%;
+    margin: 2em;
+}
+
+section{
+    display: inline-block;
+    width: 100%;
+}
+
+aside{
+    float: right;
+    margin-top: 1.5em;
+    padding-right: 5em;
+    width: 30%;
+}
+
+ul{
+    margin: 2em 0;
+}
+
+img{
+    width: 35em;
+    height: auto;
+    margin: 2em 0;
+}
+
+footer :last-child{
+    margin-top: 2em;
+}
