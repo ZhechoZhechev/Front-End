@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+.container{
+    margin: 2em auto;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    max-width: 45em;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card{
+    width: 30%;
+    border-radius: 0.5em;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ccc;
+}
+
+section{
+    flex: 1 1 auto;
+}
+
+footer{
+    border-top: 2px solid #ccc;
+}
+
+section, footer{
+    padding: 1.2em 1em;
+}
