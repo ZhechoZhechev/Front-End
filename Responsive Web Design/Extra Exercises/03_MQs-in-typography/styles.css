@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana,Tahoma, sans-serif
+}
+
+body{
+    margin: 0 auto;
+    width: 90%;
+    padding: 3em;
+    background-color: rgb(238, 238, 238);
+}
+
+header{
+    width: 100%;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 2px solid;
+}
+
+.img-first{
+    float: right;
+    padding: 0.6em;
+    border: 1px solid;
+    margin: 0 1em 0.5em 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.img-second{
+    float: left;
+    padding: 0.6em;
+    border: 1px solid;
+    margin: 0 0.5em 1em 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.quote{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.quote p{
+    padding-right: 1em;
+    flex-basis: 50%;
+    align-self: flex-end;
+}
+
+blockquote p{
+    align-self: flex-end;
+}
+
+
+blockquote{
+    display: flex;
+    flex-basis: 50%;
+    font-style: oblique;
+    color: gray;
+    border-left: 2px solid;
+    padding-left: 1.5em;
+}
+
+h2, h3{
+    margin-bottom: 1em;
+}
+
+p{
+    margin-bottom: 0.8em;
+}
+
+
+img{
+    background-color: rgb(255, 255, 255);
+}
+
+h1, h2, h3, h4, h5{
+    font-family: Georgia, serif;
+}
+
+blockquote{
+    font-family: Georgia, serif;
+}
+
+.page{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:1440px) {
+    body{
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        padding: 0.5em;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .img-first{
+        float: none;
+    }
+
+    .img-second{
+        float: none;
+    }
+
+    .quote{
+        flex-direction: column;
+    }
+
+    blockquote{
+        margin: 0.7em 0;
+    }
+}    

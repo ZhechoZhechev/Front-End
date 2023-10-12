@@ -1,0 +1,65 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding: 20px;
+  width: 300px;
+  height: 120px;
+  border: 1px solid black;
+  position: relative;
+  background-color: rgb(247, 246, 246);
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+legend {
+   padding: 5px;
+   width: 30%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   border-radius: 3px;
+   border: 1px solid black;
+   transform: translate(-1%, -50%);
+   background-color: rgb(247, 246, 246);
+}
+
+.container p{
+    flex:0 0 23%;
+    padding: 0;
+    
+}
+.container input {
+    flex: 0 0 63%;
+    height: 20px;
+    border: none;
+}
+
+button {
+    flex: 0 0 60px;
+    padding: 5px;
+    justify-self: flex-start;
+    color: white;
+    background: black;
+    border-radius: 5px;
+}
+div {
+    background-color: white;
+    padding: 2px 5px;
+    flex: 0 0 70%;
+}
