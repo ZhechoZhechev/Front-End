@@ -1,0 +1,292 @@
+html{
+    font-family: Helvetica, sans-serif;
+    background-color: #ccc;
+}
+
+body{
+    padding: 3em 2em;
+    width: 90%;
+    margin: 0 auto;
+    background-color: azure;
+}
+
+main{
+    padding: 3em 2em;
+}
+
+header{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    padding-bottom: 2.5em;
+    margin: 0 auto;
+}
+
+.section{
+    display: flex;
+    width: 80%;
+    margin-bottom: 3em;
+    padding-bottom: 1em;
+}
+
+header h1{
+    font-size: 3.5em;
+    color: #800080;
+}
+
+header p{
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+header ul{
+    font-weight: 600;
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4em;
+}
+
+.image-container{
+    width: 5em;
+    height: 5em;
+    margin-bottom: 1em;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hor-line{
+    height: 3px;
+    width: 60px;
+    background-color: black;
+    align-self: center;
+    margin-bottom: 3em;
+}
+
+.cards{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card{
+    width: 30%;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p:first-of-type{
+    font-weight: 600;
+}
+
+.card p:nth-child(2){
+    padding-bottom: 1em;
+}
+
+.card p:nth-child(4){
+    font-style: italic;
+}
+
+.section-first i{
+    font-size: 9em;
+}
+
+.first-section-left{
+    padding: 0 8em;
+}
+
+.section-second, .section-fourth{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section-second h2, .section-fourth h2{
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    padding-bottom: 0.3em;
+}
+
+.first-section-left p{
+    padding-bottom: 1em;
+}
+
+.first-section-left a{
+    padding: 0.3em 0.5em;
+    border: 2px solid;
+    border-radius: 0.2em;
+}
+
+.newsletter{
+    width: 100%;
+    padding: 1em 0;
+    flex-direction: column;
+    background-color: #68347b;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter h2{
+    color: white;
+}
+
+form{
+    padding-bottom: 1.5em;
+}
+
+form input{
+    background-color: white;
+    height: 1.55em;
+    width: 18em;
+    margin-right: 0.2em;
+    border-radius: 2px;
+}
+
+form button{
+    background: white;
+    padding: 0.2em 1em;
+    border-radius: 2px;
+}
+
+.second-cards .card p:first-of-type{
+    font-weight: initial;
+    font-style: italic;
+    text-align: center;
+}
+
+.second-cards .card p:nth-child(3){
+    font-weight: bold;
+}
+
+.second-cards .card p:nth-child(4){
+    font-style: normal;
+}
+
+footer{
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    border-top: 6px solid #800080;
+    padding: 2em 0;
+}
+
+footer h2, h3{
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+footer i{
+    padding-right: 0.5em;
+}
+
+footer p,
+footer li,
+footer a {
+    font-size: 0.93em;
+}
+
+
+.spider{
+    width: 25%
+}
+
+.sitemap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+}
+
+.sitemap ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 7em;
+}
+
+@media screen and (max-width: 1024px){
+    body{
+        padding: 1.5em 1em;
+        width: 100%;
+    }
+
+    main{
+        padding: 1.5em 1em;
+    }
+
+    header{
+        width: 100%;
+        padding-bottom: 2em;
+    }
+
+    header ul{
+        gap: 2em;
+    }
+    
+    .first-section-left {
+        padding: 0 3em;
+    }
+}
+
+@media screen and (max-width: 768px){
+    main{
+        padding: 0;
+    }
+    
+    .first-section-left {
+        padding: 0 2em;
+    }
+    
+    footer section{
+        padding-bottom: 0.5em;
+    }
+
+    header h1 {
+        font-size: 2.3em;
+        color: #800080;
+        padding-bottom: 0.1em;
+    }
+
+    header p{
+        font-size: 0.6em;
+        transform: scaley(2);
+    }
+    .card{
+        width: 45%;
+    }
+
+    footer{
+        padding: 1em 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    .spider{
+        width: 100%
+    }
+    footer h2, h3{
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+    }
+    .sitemap ul {
+        width: 45em;
+    }
+}
