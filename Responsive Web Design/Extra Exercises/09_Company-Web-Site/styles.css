@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 /* Fake image, just for this example */
 .fakeimg {
   background-color: #aaa;
@@ -9,11 +10,12 @@
 }
 
 body {
-/* TODO
-CSS Grid. Display grid. 
-Define the grid areas. 
-Create two unequal columns that sits next to each other 
-*/
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex{
+  display: flex;
 }
 
 /* TODO Reference the grid area */
@@ -23,31 +25,43 @@ Create two unequal columns that sits next to each other
 /* TODO Reference the grid area */
 
 body {
-/* TODO style the body*/
+  /* TODO style the body*/
 }
 
-header { 
-/* TODO style the header */
+header {
+  text-align: center;
+  padding: 60px;
+  margin: 0;
+  background-color: #1abc9c;
+  color: white;
 }
 
 nav {
-/* TODO style the navigation bar*/
+  background-color: #333;
+  padding: 14px 26px;
 }
 
 nav a {
-/* TODO style the navigation bar links*/
+  color: white;
+  padding: 14px 20px;
+  text-align: left;
+  text-decoration: none;
 }
 
 aside {
-/* TODO style the sidebar*/
+  background-color: #f1f1f1;
+  padding: 20px;
 }
 
 main {
-/* TODO style the main*/
+  background-color: white;
+  padding: 20px;
 }
 
-footer{
-/* TODO style the footer*/
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd;
 }
 
 /* TODO Responsive layout - when the screen is less than 700px wide, 
@@ -55,4 +69,3 @@ make the two columns stack on top of each other instead of next to each other */
 
 /* TODO Responsive layout - If the screen is smaller than 700px, 
 display the navigation bar links as block and center the text */
-
