@@ -14,18 +14,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.flex{
+.flex {
   display: flex;
-}
-
-/* TODO Reference the grid area */
-/* TODO Reference the grid area */
-/* TODO Reference the grid area */
-/* TODO Reference the grid area */
-/* TODO Reference the grid area */
-
-body {
-  /* TODO style the body*/
 }
 
 header {
@@ -64,8 +54,16 @@ footer {
   background-color: #ddd;
 }
 
-/* TODO Responsive layout - when the screen is less than 700px wide, 
-make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
 
-/* TODO Responsive layout - If the screen is smaller than 700px, 
-display the navigation bar links as block and center the text */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex {
+    display: block;
+  }
+
+}
