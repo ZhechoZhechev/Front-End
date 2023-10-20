@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+}
+
+h1, h2{
+    font-family: "Montserrat", serif;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+}
+
+.main{
+    display: flex;
+    background-color: white;
+    padding: 3em 8em;
+}
+.main>*{
+    width:50%;
+}
+
+h1{
+    font-size: 2em;
+    padding-bottom: 1em;
+}
+p{
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
+.icon-section{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3em;
+}
+.icon-section:last-child{
+    padding-bottom: 0;
+}
+
+.icon-section img{
+    width: 4em;
+    height: auto;
+    display: block;
+}
+.text p:nth-child(3) {
+    padding-bottom: 4em;
+}
