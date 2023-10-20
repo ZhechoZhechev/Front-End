@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", "PT Serif", sans-serif;
+}
+
+
+
+main{
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #d01919;
+    padding: 1em 3em;
+}
+
+header i{
+    color: white;
+    font-size: 1.2em;
+}
+
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 0.8em;
+}
+
+header ul a{
+    color: white;
+    font-size: 1.2em;
+}
+
+.first-section{
+    height: 57vh;
+    background-image: url(image/fitness-main.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; /
+}
+
+nav{
+    padding: 1.5em 2.5em;
+}
+
+nav ul{
+    display: flex;
+    gap: 5em;
+    list-style: none;
+    justify-content: flex-end;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.first-section .section-center{
+    color: white;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.first-section .section-center h1{
+    font-size: 3em;
+    padding: 2.5em 0 0 0;
+    letter-spacing: 0.3em;
+}
+.first-section .section-center p{
+    padding: 3em 0;
+    width: 48%;
+    margin: 0 auto;
+}
+
+.first-section .section-center button{
+    background-color: #d01919;
+    color: white;
+    font-weight: 600;
+    padding: 0.5em 1.5em;
+    border-radius: 0.6em;
+    border: none;
+    font-size: 1em;
+}
+.section-header{
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+.section-header h2{
+    font-size: 2em;
+    padding: 1em 0;
+}
+.ver-line{
+    height: 3px;
+    width: 3em;
+    background-color: #d01919;
+}
+.three-items-section{
+    display: flex;
+    justify-content: space-around;
+}
+.with-icons{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.with-icons i{
+    font-size: 4em;
+    padding: 0.3em 0;
+}
+.with-icons h3{
+    color: #d01919;
+    padding-bottom: 1em;
+}
+.with-icons p{
+    padding-bottom: 3em;
+}
+.third-section{
+    /* height: 57vh; */
+    background-color: #efefef;
+}
+.third-section .section-header{
+    background-color: #efefef;
+}
+/* .third-section{
+    margin-bottom: 2em;
+} */
+
+.with-icons h3:nth-child(2){
+    color: black;
+    padding-top: 1em;
+}
+.with-icons img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5em;
+}
+footer{   
+     padding: 1em 3em;
+    text-align: center;
+    background-color: #d01919;
+}
