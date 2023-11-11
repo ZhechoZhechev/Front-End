@@ -163,3 +163,47 @@ createAddressBook(['Bob:Huxley Rd',
 'Peter:Huxley Rd',
 'Jeff:Gateway Way',
 'Jeff:Huxley Rd']);
+
+//09. Cats
+
+function createCats(arr){
+    class Cat{
+        constructor(name, age){
+            this.name = name;
+            this.age = age;
+        }
+        meow(){
+            console.log(`${this.name}, age ${this.age} says Meow`);
+        }
+    }
+
+    arr.forEach(line =>{
+        const [name, age] = line.split(" ");
+        const cat = new Cat(name, age);
+        cat.meow();
+    })
+}
+
+createCats(['Mellow 2', 'Tom 5']);
+
+//09. Songs
+
+function filterSongs(arr) {
+    let songsNum = arr.shift();
+    let keyWord = arr.pop();
+
+    arr.map((songsAsText) =>{
+        const [genre, name] = songsAsText.split("_");
+        if(genre === keyWord){
+            console.log(name);
+        } else if(keyWord === "all"){
+            console.log(name);
+        }
+    })
+    
+}
+
+filterSongs([2,
+    'like_Replay_3:15',
+    'ban_Photoshop_3:48',
+    'all']);
