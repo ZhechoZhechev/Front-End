@@ -1,53 +1,76 @@
 function solve() {
-   document.querySelector('#btnSend').addEventListener('click', onClick);
+    document.querySelector("#btnSend").addEventListener("click", onClick);
 
-   function onClick() {
-       let arr = JSON.parse(document.querySelector('#inputs textarea').value);
-       let objWinner = findBestRestaurant(arr);
-       document.querySelector('#bestRestaurant>p').textContent = getMsgRest(objWinner);
-       document.querySelector('#workers>p').textContent = getMsgEmp(objWinner.workers);
-   }
+    class Worker {
+        constructor(name, salary) {
+            this.name = name;
+            this.salary = salary;
+        }
+    }
 
-   function getMsgRest(objWinner) {
-       return `Name: ${objWinner.name} Average Salary: ${objWinner.avgSalary.toFixed(2)} Best Salary: ${objWinner.maxSalary.toFixed(2)}`;
-   }
+    class Restaurant {
+        constructor(name) {
+            this.name = name;
+            this.workers = [];
+        }
 
-   function getMsgEmp(workers) {
-       return workers.map(w => `Name: ${w.worker} With Salary: ${w.salary}`).join(' ');
-   }
+        get avgSalary() {
+            const avgSalary = this.workers.reduce((acc, curr) => {
+                acc += curr.salary;
+                return acc;
+            }, 0);
+            return (avgSalary / this.workers.length).toFixed(2);
+        }
 
-   function findBestRestaurant(arr) {
-       let resultRestaurants = arr.reduce((acc, e) => {
-           let [restaurant, ...workers] = e.split(/(?: - )|(?:, )/g);
-           workers = workers.map(w => {
-               let [worker, salary] = w.split(' ');
-               return {
-                   worker: worker,
-                   salary: +salary
-               };
-           });
-           let foundRestraunt = acc.find(r => r.name === restaurant);
-           if (foundRestraunt) {
-               foundRestraunt.workers = foundRestraunt.workers.concat(workers);
-           } else {
-               acc.push({
-                   name: restaurant,
-                   workers: workers
-               });
-           }
-           return acc;
-       }, []);
+        get bestSalary() {
+            return Math.max(...this.workers.map(worker => worker.salary)).toFixed(2);
+        }
 
-       resultRestaurants.forEach((el, idx) => {
-           el.inputOrder = idx;
-           el.avgSalary = el.workers.reduce((acc, el) => acc + el.salary, 0) / el.workers.length;
-           el.maxSalary = Math.max(...el.workers.map(w => w.salary));
-       });
+        addWorker(workerName, workerSalary) {
+            let worker = new Worker(workerName, workerSalary);
+            this.workers.push(worker);
+        }
+    }
 
-       resultRestaurants.sort((a, b) => b.avgSalary - a.avgSalary || a.inputOrder - b.inputOrder);
-       let bestRestaurant = resultRestaurants[0];
-       bestRestaurant.workers.sort((a, b) => b.salary - a.salary);
+    function onClick() {
+        let input = JSON.parse(document.querySelector("#inputs textarea").value);
+        let restaurants = [];
 
-       return bestRestaurant;
-   }
+        
+        input.forEach(el => {
+            const [restName, workersDetails] = el.split(" - ");
+            let restaurant = restaurants.find(r => r.name === restName);
+
+            if (!restaurant) {
+                restaurant = new Restaurant(restName);
+                restaurants.push(restaurant);
+            }
+
+            workersDetails.split(", ").forEach(worker => {
+                const [name, salary] = worker.split(" ");
+                restaurant.addWorker(name, Number(salary));
+            });
+
+        });
+
+        let topAvgSalary = (Math.max(...restaurants.map(x => x.avgSalary))).toFixed(2);
+        let topRestaurantObj = restaurants.find(restaurant => restaurant.avgSalary === topAvgSalary);
+        let topRestName = topRestaurantObj.name;
+        let topRestBestSalary = topRestaurantObj.bestSalary;
+        let topRestWorkers = topRestaurantObj.workers;
+
+        const winner = `Name: ${topRestName} Average Salary: ${topAvgSalary} Best Salary: ${topRestBestSalary}`;
+        const listWorkers = getMsgEmp(topRestWorkers);
+
+        document.querySelector('#bestRestaurant>p').textContent = winner;
+        document.querySelector('#workers>p').textContent = listWorkers;
+ 
+    }
+
+    function getMsgEmp(workers) {
+
+        workers.sort((a, b) => b.salary - a.salary);
+        return workers.map(w => `Name: ${w.name} With Salary: ${w.salary}`).join(' ');
+    }
+
 }
