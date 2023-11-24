@@ -6,9 +6,9 @@ function solve() {
 
    buttons.forEach(button => {
       button.addEventListener("click", function addDetails(){
-         let container = this.closest(".product");
-         const productName = container.querySelector(".product-title").textContent;
-         const productPrice = Number(container.querySelector(".product-line-price").textContent);
+
+         let productName = button.parentElement.parentElement.querySelector(".product-title").textContent;
+         let productPrice = Number(button.parentElement.parentElement.querySelector(".product-line-price").textContent)
          let product = {productName, productPrice};
          result.push(product);
 
