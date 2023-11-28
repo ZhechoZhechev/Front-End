@@ -3,8 +3,9 @@ function encodeAndDecodeMessages() {
     let decodeAndReadBtn = document.querySelector("#main > div:last-child button");
 
 
-    let inputTextarea = document.querySelector("textarea[placeholder^=Write");
-    let outputTextarea = document.querySelector("textarea[placeholder^=No");
+    // let inputTextarea = document.querySelector("textarea[placeholder^=Write");
+    // let outputTextarea = document.querySelector("textarea[placeholder^=No");
+    let [inputTextarea, outputTextarea] = Array.from(document.querySelectorAll("textarea"));
 
     encodeAndSendBtn.addEventListener("click", encode);
     decodeAndReadBtn.addEventListener("click", decode);
@@ -35,3 +36,4 @@ function encodeAndDecodeMessages() {
         outputTextarea.value = decoded.join("");
     }
 }
+
