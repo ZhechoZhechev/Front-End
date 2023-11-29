@@ -1,5 +1,5 @@
 function solve() {
-  
+
   let generateButton = document.querySelector("#exercise button:first-of-type");
   generateButton.addEventListener("click", parseFurnitureInfo);
 
@@ -22,9 +22,10 @@ function solve() {
       let price = Number(row.querySelector("td:nth-of-type(3)").innerText);
       let decFactor = Number(row.querySelector("td:nth-of-type(4)").innerText);
 
-      infoArray.push({name, price, decFactor});
+      infoArray.push({ name, price, decFactor });
     })
-    let finalInfo = infoArray.reduce((acc, curr) =>{
+
+    let finalInfo = infoArray.reduce((acc, curr) => {
       acc.names.push(curr.name);
       acc.totalPrice += curr.price;
       acc.averageDecFactor += curr.decFactor / checkboxes.length;
