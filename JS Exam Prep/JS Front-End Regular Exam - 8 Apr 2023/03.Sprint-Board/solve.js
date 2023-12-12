@@ -1,6 +1,7 @@
-const issueUrl = "http://localhost:3030/jsonstore/tasks/";
+const issueUrl = "http://localhost:3030/jsonstore/tasks";
 const loadBoardBtn = document.querySelector("#load-board-btn");
 const addTaskBtn = document.querySelector("#create-task-btn");
+
 
 const statusToUls = {
     "ToDo": document.querySelector("#todo-section .task-list"),
@@ -10,10 +11,16 @@ const statusToUls = {
 }
 
 const statusToButtonText = {
-    "ToDo": "Move To In Progress",
-    "In Progress": "Move To Code Rewie",
-    "Code Review": "Move To Done",
+    "ToDo": "Move to In Progress",
+    "In Progress": "Move to Code Review",
+    "Code Review": "Move to Done",
     "Done": "Close"
+}
+
+const textContentToStatusMap = {
+    "Move to In Progress": "In Progress",
+    "Move to Code Review": "Code Review",
+    "Move to Done": "Done",
 }
 
 const inputFields = {
@@ -26,8 +33,8 @@ function attachEvents() {
     addTaskBtn.addEventListener("click", addATask);
 }
 
-function addATask() {
-    fetch(issueUrl, {
+async function addATask() {
+    await fetch(issueUrl, {
         method: "POST",
         body: JSON.stringify({
             title: inputFields.title.value,
@@ -50,14 +57,38 @@ async function loadBoard() {
         let li = createElement("li", null, ["task"], null, ulDestination);
         createElement("h3", `${obj.title}`, [], null, li);
         createElement("p", `${obj.description}`, [], null, li);
-        createElement("button", `${statusToButtonText[obj.status]}`, [], null, li)
+        let moveBtn = createElement("button", `${statusToButtonText[obj.status]}`, [], obj._id, li)
+        moveBtn.addEventListener("click", handleTaskAction);
     })
+}
+
+async function handleTaskAction(e) {
+    let taskId = e.target.id;
+    if (e.target.textContent === "Close") {
+        await deleteTask(taskId);
+    } else {
+        await changeTaskStatus(taskId, e.target.textContent);
+    }
+    loadBoard();
+}
+
+async function changeTaskStatus(taskId, status) {
+    await fetch(`${issueUrl}/${taskId}`, {
+        method: "PATCH",
+        body: JSON.stringify({ status: textContentToStatusMap[status] })
+    });
+}
+
+async function deleteTask(taskId) {
+    await fetch(`${issueUrl}/${taskId}`, {
+        method: "DELETE",
+    });
 }
 
 function clearAllSections() {
     Object.values(statusToUls)
         .forEach((section) => {
-            section.innerHTML = '';
+            section.innerHTML = "";
         })
 }
 
