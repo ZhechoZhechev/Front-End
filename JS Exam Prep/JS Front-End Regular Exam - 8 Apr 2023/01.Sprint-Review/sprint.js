@@ -54,7 +54,6 @@ function solve(input) {
     } else {
         console.log("Sprint was unsuccessful...");
     }
-
     function getPointsForStatus(status) {
         return Object.values(sprintBoard)
             .flatMap(assigneeTasks => assigneeTasks.filter(task => task.status === status))
